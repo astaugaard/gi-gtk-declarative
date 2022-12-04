@@ -1,4 +1,4 @@
-resolver: lts-17.0
+resolver: lts-20.2
 
 packages:
 - gi-gtk-declarative
@@ -8,4 +8,4 @@ packages:
 extra-deps: []
 
 nix:
-  packages: [pkgconfig, gnome3.gobjectIntrospection, gnome3.gtk]
+  packages: [pkgconfig, gtk3, gobject-introspection]
