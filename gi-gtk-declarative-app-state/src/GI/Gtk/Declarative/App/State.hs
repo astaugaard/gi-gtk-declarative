@@ -99,7 +99,8 @@ runLoop App {..} win = do
     runUI (do w <- someStateWidget firstState
               -- Gtk.set win [#child := w]
               #add win w
-              Gtk.widgetShowAll w)
+              -- Gtk.widgetShowAll win
+              )
     sub <- subscribe firstMarkup firstState (publishEvent events)
     return (firstState, sub)
 
@@ -136,7 +137,7 @@ runLoop App {..} win = do
             newState <- createNew
             w <- someStateWidget newState
             #add win w
-            Gtk.widgetShowAll w
+            -- Gtk.widgetShowAll win
             sub <- subscribe newMarkup newState (publishEvent events)
             return (newState, sub)
           Keep -> return (oldState, oldSubscription)
