@@ -3,6 +3,7 @@ resolver: lts-20.2
 packages:
 - gi-gtk-declarative
 - gi-gtk-declarative-app-simple
+- gi-gtk-declarative-app-state
 - examples
 
 extra-deps: []
